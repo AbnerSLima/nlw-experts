@@ -97,7 +97,7 @@ const template = document.querySelector('template')
 const corretas = new Set()
 const totalDePerguntas = perguntas.length
 const mostrarTotal = document.querySelector('#acertos span')
-mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas
+mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas + ' peguntas!'
 
 //vcnfn
 for(const item of perguntas) {
