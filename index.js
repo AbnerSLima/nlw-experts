@@ -1,95 +1,95 @@
 const perguntas = [
-    {
-      pergunta: "Qual é a sintaxe correta para se referir a um arquivo JavaScript externo chamado 'script.js'?",
-      respostas: [
-        "<script src='script.js'></script>",
-        "<javascript src='script.js'></javascript>",
-        "<link href='script.js'></link>"
-      ],
-      correta: 0
-    },
-    {
-      pergunta: "Qual desses métodos de array adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array?",
-      respostas: [
-        "push()",
-        "pop()",
-        "shift()"
-      ],
-      correta: 0
-    },
-    {
-      pergunta: "Qual é a maneira correta de declarar uma variável em JavaScript?",
-      respostas: [
-        "variable name;",
-        "var name;",
-        "v name;"
-      ],
-      correta: 1
-    },
-    {
-      pergunta: "Qual é o operador de igualdade estrita em JavaScript?",
-      respostas: [
-        "==",
-        "===",
-        "="
-      ],
-      correta: 1
-    },
-    {
-      pergunta: "Qual método JavaScript é usado para selecionar um elemento HTML pelo seu id?",
-      respostas: [
-        "getElementById()",
-        "selectById()",
-        "queryById()"
-      ],
-      correta: 0
-    },
-    {
-      pergunta: "Qual é o resultado da expressão '5 + '5' em JavaScript?",
-      respostas: [
-        "10",
-        "55",
-        "Error"
-      ],
-      correta: 1
-    },
-    {
-      pergunta: "Qual função JavaScript é usada para imprimir algo no console do navegador?",
-      respostas: [
-        "console.print()",
-        "console.write()",
-        "console.log()"
-      ],
-      correta: 2
-    },
-    {
-      pergunta: "Como você escreve um comentário de linha única em JavaScript?",
-      respostas: [
-        "// This is a comment",
-        "<!-- This is a comment -->",
-        "/* This is a comment */"
-      ],
-      correta: 0
-    },
-    {
-      pergunta: "Qual método JavaScript é usado para remover o último elemento de um array e retornar esse elemento?",
-      respostas: [
-        "remove()",
-        "delete()",
-        "pop()"
-      ],
-      correta: 2
-    },
-    {
-      pergunta: "Qual é a maneira correta de escrever um condicional 'if' em JavaScript?",
-      respostas: [
-        "if condition {}",
-        "if {condition}",
-        "if (condition) {}"
-      ],
-      correta: 2
-    }
-  ];
+  {
+    pergunta: "Qual dado é usado para determinar o sucesso ou fracasso de uma ação em D&D 5e?",
+    respostas: [
+      "D4",
+      "D6",
+      "D20"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual é o nome da habilidade usada para medir a capacidade de um personagem para se mover rapidamente e se esquivar de ataques?",
+    respostas: [
+      "Força",
+      "Destreza",
+      "Constituição"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é a principal estatística usada por um guerreiro em combate corpo a corpo?",
+    respostas: [
+      "Inteligência",
+      "Sabedoria",
+      "Força"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Quando um personagem rola um dado de ataque em D&D 5e, ele adiciona qual estatística ao resultado?",
+    respostas: [
+      "Destreza",
+      "Constituição",
+      "Força"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "Qual termo é usado para descrever o conjunto de regras que define como as ações são resolvidas em D&D 5e?",
+    respostas: [
+      "Mecânicas de Combate",
+      "Regras de Movimento",
+      "Sistema de Atributos"
+    ],
+    correta: 0
+  },
+  {
+    pergunta: "O que um jogador faz se quiser que seu personagem tente persuadir um NPC a fazer algo?",
+    respostas: [
+      "Rola um dado de ataque",
+      "Rola um dado de habilidade",
+      "Rola um dado de dano"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual termo é usado para descrever a quantidade máxima de pontos de vida que um personagem pode ter?",
+    respostas: [
+      "Energia Vital",
+      "Pontos de Golpe",
+      "Resistência"
+    ],
+    correta: 1
+  },
+  {
+    pergunta: "Qual é o nome dado a um teste de habilidade desafiadora em D&D 5e?",
+    respostas: [
+      "Teste de Resistência",
+      "Teste de Aptidão",
+      "Teste de Habilidade"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual é o nome dado a um encontro com um oponente hostil em D&D 5e?",
+    respostas: [
+      "Conversa",
+      "Desafio",
+      "Combate"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual é o termo usado para descrever a quantidade de movimento que um personagem pode fazer em uma rodada?",
+    respostas: [
+      "Velocidade",
+      "Deslocamento",
+      "Mobilidade"
+    ],
+    correta: 1
+  }
+];
   
   const quiz = document.querySelector('#quiz')
   const template = document.querySelector('template')
