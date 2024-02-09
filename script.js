@@ -27,7 +27,7 @@ const perguntas = [
     correta: 2
   },
   {
-    pergunta: "Quando um personagem rola um dado de ataque em D&D 5e, ele adiciona qual estatística ao resultado?",
+    pergunta: "Quando um personagem rola um dado de ataque a distâcia, ele adiciona qual modificador ao resultado?",
     respostas: [
       "Destreza",
       "Constituição",
@@ -36,13 +36,13 @@ const perguntas = [
     correta: 0
   },
   {
-    pergunta: "Qual termo é usado para descrever o conjunto de regras que define como as ações são resolvidas em D&D 5e?",
+    pergunta: "Qual é o nome dado à capacidade de um personagem de realizar uma ação adicional durante sua vez em uma rodada de combate?",
     respostas: [
-      "Mecânicas de Combate",
-      "Regras de Movimento",
-      "Sistema de Atributos"
+      "Movimento Extra",
+      "Ação Bônus",
+      "Ataque Adicional"
     ],
-    correta: 0
+    correta: 1
   },
   {
     pergunta: "O que um jogador faz se quiser que seu personagem tente persuadir um NPC a fazer algo?",
@@ -54,29 +54,29 @@ const perguntas = [
     correta: 1
   },
   {
-    pergunta: "Qual termo é usado para descrever a quantidade máxima de pontos de vida que um personagem pode ter?",
+    pergunta: "Qual é o termo usado para descrever a capacidade de um personagem de ignorar parte do dano de um ataque?",
     respostas: [
-      "Energia Vital",
-      "Pontos de Golpe",
+      "Evasão",
+      "Absorção",
       "Resistência"
-    ],
-    correta: 1
-  },
-  {
-    pergunta: "Qual é o nome dado a um teste de habilidade desafiadora em D&D 5e?",
-    respostas: [
-      "Teste de Resistência",
-      "Teste de Aptidão",
-      "Teste de Habilidade"
     ],
     correta: 2
   },
   {
-    pergunta: "Qual é o nome dado a um encontro com um oponente hostil em D&D 5e?",
+    pergunta: "Qual é o nome dado à rolagem de dados para determinar a ordem do combate?",
     respostas: [
-      "Conversa",
-      "Desafio",
-      "Combate"
+      "Iniciação",
+      "Determinação",
+      "Iniciativa"
+    ],
+    correta: 2
+  },
+  {
+    pergunta: "Qual é o nome dado à rolagem de dados para determinar se um ataque atinge ou não um alvo?",
+    respostas: [
+      "Verificação de Ataque",
+      "Determinação de Acerto",
+      "Rolagem de Ataque"
     ],
     correta: 2
   },
