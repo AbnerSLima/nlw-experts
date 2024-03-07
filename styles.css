@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;800&display=swap');
 
+/* Reset CSS */
 *, :root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
   font-family: 'Cinzel', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,27 +13,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
-img {
-    width: 200px;
-}
-
+/* Estilo para a página */
 body {
   background-color: #eae3c7;
 }
 
+/* Estilos para o conteúdo main */
 main {
   padding: 20px;
   max-width: 640px;
   margin: 0 auto 64px;
-                            position: relative;
+  position: relative;
 }
 
+/* Imagem do cabeçalho */
+img {
+  width: 200px;
+}
+
+/* Estilo para o cabeçalho */
 header {
   text-align: center;
   margin-top: 46px;
   padding-bottom: 18px;
 }
 
+/* Estilo do texto cabeçalho */
 header h1 {
   margin-top: 12px;
   font-size: 30px;
@@ -41,6 +46,7 @@ header h1 {
   font-weight: 700;
 }
 
+/* Estilos para as perguntas */
 #quiz {
   counter-reset: quiz-item;
 }
@@ -100,6 +106,7 @@ header h1 {
   gap: 6px;
 }
 
+/* Estilo para chekbox */
 input {
   all: unset;
   border: 2px solid #c78649;
@@ -127,29 +134,15 @@ input:checked:before {
   background-color: #c78649;
 }
 
-#acertos {
-  text-align: center;
+/* Estilo para o campo Resultado */
+#resultado {
+  position: absolute;
   background-color: #000000;
-  color: #FFFFFF;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  
-  bottom: 0;
-  left: 0;
-  margin-top: 24px;
-  
-  width: 100%;
-  padding: 12px;
-  
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  padding: 60px;
+  width: 80%;
 }
 
+/* Estilo para os botões */
 button {
     font-size: 24px;
     border-radius: 8px;
@@ -167,9 +160,25 @@ button:hover {
     color: #FF010A; /* Cor do texto no hover */
 }
 
-#resultado {
-    position: absolute;
-    background-color: #000;
-    padding: 30px;
-    width: 80%;
+/* Estilo para o campo acertos */
+#acertos {
+  text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  
+  bottom: 0;
+  left: 0;
+  margin-top: 24px;
+  
+  width: 100%;
+  padding: 12px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

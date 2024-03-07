@@ -27,7 +27,7 @@ const perguntas = [
     correta: 2
   },
   {
-    pergunta: "Quando um personagem rola um dado de ataque a distâcia, ele adiciona qual modificador ao resultado?",
+    pergunta: "Quando um personagem rola um dado de ataque em D&D 5e, ele adiciona qual estatística ao resultado?",
     respostas: [
       "Destreza",
       "Constituição",
@@ -36,13 +36,13 @@ const perguntas = [
     correta: 0
   },
   {
-    pergunta: "Qual é o nome dado à capacidade de um personagem de realizar uma ação adicional durante sua vez em uma rodada de combate?",
+    pergunta: "Qual termo é usado para descrever o conjunto de regras que define como as ações são resolvidas em D&D 5e?",
     respostas: [
-      "Movimento Extra",
-      "Ação Bônus",
-      "Ataque Adicional"
+      "Mecânicas de Combate",
+      "Regras de Movimento",
+      "Sistema de Atributos"
     ],
-    correta: 1
+    correta: 0
   },
   {
     pergunta: "O que um jogador faz se quiser que seu personagem tente persuadir um NPC a fazer algo?",
@@ -54,29 +54,29 @@ const perguntas = [
     correta: 1
   },
   {
-    pergunta: "Qual é o termo usado para descrever a capacidade de um personagem de ignorar parte do dano de um ataque?",
+    pergunta: "Qual termo é usado para descrever a quantidade máxima de pontos de vida que um personagem pode ter?",
     respostas: [
-      "Evasão",
-      "Absorção",
+      "Energia Vital",
+      "Pontos de Golpe",
       "Resistência"
     ],
-    correta: 2
+    correta: 1
   },
   {
-    pergunta: "Qual é o nome dado à rolagem de dados para determinar a ordem do combate?",
+    pergunta: "Qual é o nome dado a um teste de habilidade desafiadora em D&D 5e?",
     respostas: [
-      "Iniciação",
-      "Determinação",
-      "Iniciativa"
+      "Teste de Resistência",
+      "Teste de Aptidão",
+      "Teste de Habilidade"
     ],
     correta: 2
   },
   {
-    pergunta: "Qual é o nome dado à rolagem de dados para determinar se um ataque atinge ou não um alvo?",
+    pergunta: "Qual é o nome dado a um encontro com um oponente hostil em D&D 5e?",
     respostas: [
-      "Verificação de Ataque",
-      "Determinação de Acerto",
-      "Rolagem de Ataque"
+      "Conversa",
+      "Desafio",
+      "Combate"
     ],
     correta: 2
   },
@@ -97,7 +97,7 @@ const template = document.querySelector('template')
 const corretas = new Set()
 const totalDePerguntas = perguntas.length
 const mostrarTotal = document.querySelector('#acertos span')
-mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas + ' perguntas!'
+mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas
 
 //vcnfn
 for(const item of perguntas) {
@@ -117,7 +117,7 @@ for(const item of perguntas) {
         corretas.add(item)
       }
       
-      mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas + ' perguntas!'
+      mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas + ' peguntas!'
     }
     
     quizItem.querySelector('dl').appendChild(dt)
@@ -132,6 +132,38 @@ resultadoBtn.addEventListener('click', () => {
     resultadoBtn.style.display = 'none';
 });
 
+const gabaritoBtn = document.querySelector('#gabarito');
+
+gabaritoBtn.addEventListener('click', () => {
+
+    // Seleciona todos os elementos 'dl' dentro de '.quiz-item'
+    const respostasQuiz = document.querySelectorAll('.quiz-item dl');
+
+    // Itera sobre cada pergunta
+    perguntas.forEach((pergunta, index) => {
+        // Obtém o índice da resposta correta para esta pergunta
+        const respostaCorreta = pergunta.correta;
+
+        // Seleciona o input de resposta correspondente à pergunta
+        const inputResposta = respostasQuiz[index].querySelector(`input[value="${respostaCorreta}"]`);
+
+        // Seleciona o input de resposta marcado pelo usuário
+        const inputMarcado = respostasQuiz[index].querySelector('input:checked');
+
+        // Verifica se o usuário selecionou uma resposta
+        if (inputMarcado) {
+            // Verifica se a resposta selecionada está correta
+            if (inputMarcado.value == respostaCorreta) {
+                // Define o estilo de fundo verde para a resposta correta
+                inputMarcado.parentElement.style.color = '#00FF00';
+            } else {
+                // Define o estilo de fundo vermelho para a resposta incorreta
+                inputMarcado.parentElement.style.color = '#FF0000';
+            }
+        }
+    });
+});
+
 const tentativaBtn = document.querySelector('#tentativa');
 
 tentativaBtn.addEventListener('click', () => {
@@ -139,5 +171,3 @@ tentativaBtn.addEventListener('click', () => {
     window.scrollTo(0, 0);
 });
 }
-  
-  
